@@ -4,9 +4,7 @@ import React from 'react'
 import Header from './components/global/Header'
 import Footer from './components/global/Footer'
 import Contact from './pages/contact/Contact'
-
 const App = () => {
-  const theme = useTheme()
   return (
     <>
     <Header />
@@ -14,6 +12,6 @@ const App = () => {
     <Footer />
     </>
   );
-}
+};
 
-export default App
+export default App;
