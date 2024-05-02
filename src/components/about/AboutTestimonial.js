@@ -84,7 +84,10 @@ function AboutTestimonial() {
   return (
     <>
       <Box>
-        <Box bgcolor={"#F8F9FC"} sx={{ padding: "120px 0px" }}>
+        <Box
+          bgcolor={theme.palette.LightBlueBackground}
+          sx={{ padding: "120px 0px" }}
+        >
           <Container maxWidth="xl">
             <Grid container justifyContent={"center"}>
               <Grid item xs={12}>
