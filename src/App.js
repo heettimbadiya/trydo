@@ -1,14 +1,14 @@
-import { useTheme } from '@emotion/react'
-import { Box } from '@mui/material'
-import React from 'react'
+import { useTheme } from "@emotion/react";
+import React from "react";
+import About from "./pages/about/About";
 
 const App = () => {
-  const theme = useTheme()
+  const theme = useTheme();
   return (
-    <Box color={theme.palette.red}>
-      hello duniya .....................................
-    </Box>
+    <>
+      <About />
+    </>
   );
-}
+};
 
-export default App
+export default App;
