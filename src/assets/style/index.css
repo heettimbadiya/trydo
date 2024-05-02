@@ -116,3 +116,9 @@ img {
   justify-content: center !important;
 }
 
+/* ==========background-to-text================= */
+.theme-gradient {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text !important;
+  display: inline-block;
+}

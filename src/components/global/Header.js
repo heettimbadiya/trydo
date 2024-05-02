@@ -136,7 +136,7 @@ const Header = () => {
                   <NavLink to={item.to} style={{ color: "unset" }}>
                     <Box
                       onClick={
-                        item.subMenu.length === 0 ? () => setMobileMenuOpen(false) : null
+                        item.subMenu.length === 0 ? () => setMobileMenuOpen(!mobileMenuOpen) : null
                       }
                       sx={{ fontWeight: "500" }}
                     >
