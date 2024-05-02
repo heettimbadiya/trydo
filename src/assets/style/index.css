@@ -4,7 +4,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+
+  font-family: "Poppins", sans-serif !important;
+
 }
 code {
   font-family: "Poppins", sans-serif !important;
@@ -28,4 +30,12 @@ img {
   width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+/* =================hero-section================= */
+.css-1wuw8dw-MuiBreadcrumbs-separator {
+  color: gray !important;
+}
+.css-4pdmu4-MuiBreadcrumbs-ol {
+  justify-content: center !important;
 }

@@ -1,14 +1,13 @@
-import { useTheme } from '@emotion/react'
-import React from 'react'
-import Home from './pages/Home/Home'
+import React from "react";
+import About from "./pages/about/About";
+
 
 const App = () => {
-  const theme = useTheme()
   return (
     <>
-      <Home />
+      <About />
     </>
   );
-}
+};
 
-export default App
+export default App;
