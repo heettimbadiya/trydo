@@ -11,8 +11,8 @@ const Footer = () => {
   const theme = useTheme();
   return (
     <>
-      <Box>
-        <Grid container>
+      <Box sx={{mt:"50px"}}>
+        <Grid container >
           <Grid item xs={12} md={6}>
             <Box
               sx={{

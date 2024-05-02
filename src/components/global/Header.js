@@ -133,7 +133,16 @@ const Header = () => {
                     },
                   }}
                 >
-                  <Box sx={{ fontWeight: "500" }}>{item.label}</Box>
+                  <NavLink to={item.to} style={{ color: "unset" }}>
+                    <Box
+                      onClick={
+                        item.subMenu.length === 0 ? () => setMobileMenuOpen(false) : null
+                      }
+                      sx={{ fontWeight: "500" }}
+                    >
+                      {item.label}
+                    </Box>
+                  </NavLink>
                   <Box>
                     {item.subMenu.length === 0 ? "" : <KeyboardArrowDownIcon />}
                   </Box>
@@ -166,6 +175,7 @@ const Header = () => {
                         {item.subMenu.map((val, subIndex) => (
                           <NavLink to={val.to} style={{ color: "unset" }}>
                             <Box
+                              onClick={handleDrawerToggle}
                               sx={{
                                 py: "4px",
                                 px: "15px !important",

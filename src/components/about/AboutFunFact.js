@@ -14,7 +14,7 @@ function AboutFunFact() {
         >
           <ScrollTrigger onEnter={() => setCounterstate(true)}>
             <Grid container display={"flex"} justifyContent={"center"}>
-              <Grid item sm={8} display={"flex"} justifyContent={"center"}>
+              <Grid item display={"flex"} justifyContent={"center"}>
                 <Box>
                   <Box textAlign={"center"}>
                     <Typography variant="h3">Our Fun Facts</Typography>
