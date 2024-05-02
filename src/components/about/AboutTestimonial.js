@@ -1,12 +1,12 @@
 import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import img1 from "../../assets/image/about/testimonial/testimonial-1.jpg";
-import img2 from "../../assets/image/about/testimonial/testimonial-2.jpg";
-import img3 from "../../assets/image/about/testimonial/testimonial-3.jpg";
-import img4 from "../../assets/image/about/testimonial/testimonial-4.jpg";
-import img5 from "../../assets/image/about/testimonial/testimonial-5.jpg";
-import img6 from "../../assets/image/about/testimonial/testimonial-6.jpg";
-import img7 from "../../assets/image/about/testimonial/testimonial-7.jpg";
+import img1 from "../../assets/images/about/testimonial/testimonial-1.jpg";
+import img2 from "../../assets/images/about/testimonial/testimonial-2.jpg";
+import img3 from "../../assets/images/about/testimonial/testimonial-3.jpg";
+import img4 from "../../assets/images/about/testimonial/testimonial-4.jpg";
+import img5 from "../../assets/images/about/testimonial/testimonial-5.jpg";
+import img6 from "../../assets/images/about/testimonial/testimonial-6.jpg";
+import img7 from "../../assets/images/about/testimonial/testimonial-7.jpg";
 
 function AboutTestimonial() {
   const theme = useTheme();

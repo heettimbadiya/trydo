@@ -208,7 +208,7 @@ const Header = () => {
         sx={{
           position: "unset",
           boxShadow: "0 2px 48px 0 rgba(0,0,0,.08)",
-          backgroundColor: "black",
+          backgroundColor: "#000",
           py: { md: "50px", xs: "13px" },
         }}
       >
@@ -244,7 +244,6 @@ const Header = () => {
                   <img
                     src={logo}
                     alt="Logo"
-
                     style={{ objectFit: "contain !important" }}
                   />
                 </Box>

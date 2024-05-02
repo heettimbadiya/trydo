@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
-import findimage from "../../assets/image/about/findwork/finding-about.png";
+import findimage from "../../assets/images/about/findwork/finding-about.png";
 
 function AboutFindWork() {
   const theme = useTheme();

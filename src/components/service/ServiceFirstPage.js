@@ -1,6 +1,6 @@
 import React from 'react'
 import HeroSection from '../global/HeroSection'
-import background from "../../assets/image/global/Herosection/heroImage.jpg"
+import background from "../../assets/images/global/Herosection/heroImage.jpg"
 const ServiceFirstPage = () => {
   return (
     <>

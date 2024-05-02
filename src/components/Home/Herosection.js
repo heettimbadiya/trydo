@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Container, useTheme } from "@mui/material";
 import backImg from "../../assets/images/Home/back.jpg";
-import Header from "../global/Header";
 
 const Herosection = () => {
   const theme = useTheme();

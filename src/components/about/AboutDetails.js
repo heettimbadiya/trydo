@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
-import Aboutimg from "../../assets/image/about/Deatils/about-1.jpg";
+import Aboutimg from "../../assets/images/about/Deatils/about-1.jpg";
 
 function AboutDetails() {
   const theme = useTheme();
