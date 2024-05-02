@@ -3,6 +3,7 @@ const theme = createTheme({
   palette: {
     white: "#fff",
     textGray: "#C6C9D8",
+    black: "#000",
     red: "#F9004D",
     darkRed: "#F4152F",
     pink: "#FFEDF2",
@@ -13,7 +14,9 @@ const theme = createTheme({
     lightBlack: "#1d1d24",
     backgroundGray: "#272527",
     transparent: "transparent",
+    backgroundGredient: "-webkit-linear-gradient(90deg, #f61b10, #ef0963)",
     
+
   },
 });
 export default theme;
