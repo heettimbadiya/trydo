@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <>
       <Box>
-        <Grid container sx={{ mt: "200px" }}>
+        <Grid container>
           <Grid item xs={12} md={6}>
             <Box
               sx={{

@@ -17,6 +17,7 @@ import { useTheme } from "@emotion/react";
 import logo from "../../assets/images/header/logo-light.png";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   const drawerWidth = 290;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,10 +25,9 @@ const Header = () => {
 
   const theme = useTheme();
 
-
   const handleDrawerToggle = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    setMobileSubMenuOpen()
+    setMobileSubMenuOpen();
   };
 
   const menuItems = [
@@ -35,69 +35,72 @@ const Header = () => {
       label: "Home",
       to: "/",
       subMenu: [
-        "Main Demo",
-        "Main Demo Dark",
-        "Creative Agency",
-        "Creative One Page",
-        "Creative Portfolio",
-        "Personal Portfolio",
-        "Portfolio One Page",
-        "Portfolio One Page 02",
-        "Digital Agency",
-        "Startup",
-        "Paralax",
-        "Minimal Portfolio",
-        "Business",
-        "Home Particles",
-        "Studio Agency",
-        "Designer Portfolio",
-        "Interactive Agency",
+        { listItem: "Main Demo", to: "/" },
+        { listItem: "Main Demo Dark", to: "/" },
+        { listItem: "Creative Agency", to: "/" },
+        { listItem: "Creative One Page", to: "/" },
+        { listItem: "Creative Portfolio", to: "/" },
+        { listItem: "Personal Portfolio", to: "/" },
+        { listItem: "Portfolio One Page", to: "/" },
+        { listItem: "Portfolio One Page 02", to: "/" },
+        { listItem: "Digital Agency", to: "/" },
+        { listItem: "Startup", to: "/" },
+        { listItem: "Paralax", to: "/" },
+        { listItem: "Minimal Portfolio", to: "/" },
+        { listItem: "Business", to: "/" },
+        { listItem: "Home Particles", to: "/" },
+        { listItem: "Studio Agency", to: "/" },
+        { listItem: "Designer Portfolio", to: "/" },
+        { listItem: "Interactive Agency", to: "/" },
       ],
     },
     {
       label: "Service",
-      to: "/services",
-      subMenu: ["Service", "Service Details"],
+      to: "/service",
+      subMenu: [
+        { listItem: "Service", to: "/service" },
+        { listItem: "Service Details", to: "/service-details" },
+      ],
     },
     { label: "About", to: "/about", subMenu: [] },
     {
-      label: "Pges",
+      label: "Pages",
       to: "/pages",
       subMenu: [
-        "Blog List",
-        "Blog Details",
-        "Service",
-        "Service Details",
-        "Portfolio",
-        "Portfolio Details",
-        "404",
+        { listItem: "Blog List", to: "/pages" },
+        { listItem: "Blog Details", to: "/pages" },
+        { listItem: "Service", to: "/pages" },
+        { listItem: "Service Details", to: "/pages" },
+        { listItem: "Portfolio", to: "/pages" },
+        { listItem: "Portfolio Details", to: "/pages" },
+        { listItem: "404", to: "/pages" },
       ],
     },
     {
       label: "Blocks",
       to: "/blocks",
       subMenu: [
-        "Portfolio",
-        "Team",
-        "Service",
-        "Video Popup",
-        "Progressbar",
-        "Gallery",
-        "Counters",
-        "Blog List",
-        "Clint Logo",
-        "Contact Form",
-        "Google Map",
-        "Columns",
-        "Pricing Table",
+        { listItem: "Portfolio", to: "/blocks" },
+        { listItem: "Team", to: "/blocks" },
+        { listItem: "Service", to: "/blocks" },
+        { listItem: "Video Popup", to: "/blocks" },
+        { listItem: "Progressbar", to: "/blocks" },
+        { listItem: "Gallery", to: "/blocks" },
+        { listItem: "Counters", to: "/blocks" },
+        { listItem: "Blog List", to: "/blocks" },
+        { listItem: "Clint Logo", to: "/blocks" },
+        { listItem: "Contact Form", to: "/blocks" },
+        { listItem: "Google Map", to: "/blocks" },
+        { listItem: "Columns", to: "/blocks" },
+        { listItem: "Pricing Table", to: "/blocks" },
       ],
     },
     { label: "Contact", to: "/contact", subMenu: [] },
   ];
 
-    const handleSubMenuToggle = (index) => {
-      setMobileSubMenuOpen((prevIndex) => (prevIndex === index ? null : index)); // Toggle submenu
-    };
+  const handleSubMenuToggle = (index) => {
+    setMobileSubMenuOpen((prevIndex) => (prevIndex === index ? null : index)); // Toggle submenu
+  };
 
   const drawer = (
     <Box>
@@ -161,20 +164,22 @@ const Header = () => {
                         }}
                       >
                         {item.subMenu.map((val, subIndex) => (
-                          <Box
-                            sx={{
-                              py: "4px",
-                              px: "15px !important",
-                              borderRadius: "8px",
-                              "&:hover": {
-                                color: theme.palette.red,
-                                backgroundColor: theme.palette.pink,
-                              },
-                            }}
-                            key={subIndex}
-                          >
-                            {val}
-                          </Box>
+                          <NavLink to={val.to} style={{ color: "unset" }}>
+                            <Box
+                              sx={{
+                                py: "4px",
+                                px: "15px !important",
+                                borderRadius: "8px",
+                                "&:hover": {
+                                  color: theme.palette.red,
+                                  backgroundColor: theme.palette.pink,
+                                },
+                              }}
+                              key={val.listItem}
+                            >
+                              {val.listItem}
+                            </Box>
+                          </NavLink>
                         ))}
                       </Typography>
                     </>
@@ -191,7 +196,7 @@ const Header = () => {
     <>
       <AppBar
         sx={{
-          position: "fixed",
+          position: "unset",
           boxShadow: "0 2px 48px 0 rgba(0,0,0,.08)",
           backgroundColor: "black",
           py: { md: "50px", xs: "13px" },
@@ -222,13 +227,14 @@ const Header = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    height: { md: "60px", xs: "43px" },
-                    width: { md: "166px", xs: "120px" },
+                    height: { md: "77.5px", xs: "50px" },
+                    width: { md: "186px", xs: "120px" },
                   }}
                 >
                   <img
                     src={logo}
                     alt="Logo"
+
                     style={{ objectFit: "contain !important" }}
                   />
                 </Box>
@@ -245,14 +251,14 @@ const Header = () => {
                 </IconButton>
               </Box>
               {/* Mobile Menu */}
-             
+
               <nav>
                 <Drawer
                   variant="temporary"
                   open={mobileMenuOpen}
                   onClose={handleDrawerToggle}
                   ModalProps={{
-                    keepMounted: true, 
+                    keepMounted: true,
                   }}
                   sx={{
                     display: { xs: "block", md: "none" },
@@ -276,7 +282,7 @@ const Header = () => {
                 {/* Desktop Menu Items */}
                 {menuItems.map((item, index) => (
                   <Box
-                  key={index}
+                    key={index}
                     sx={{
                       mx: 1.5,
                       color: theme.palette.textGray,
@@ -298,7 +304,10 @@ const Header = () => {
                       },
                     }}
                   >
-                    {item.label}
+                    <NavLink to={item.to} style={{ color: "unset" }}>
+                      {item.label}
+                    </NavLink>
+
                     <Box
                       className="subMenu"
                       sx={{
@@ -316,20 +325,22 @@ const Header = () => {
                       }}
                     >
                       {item.subMenu.map((val, index) => (
-                        <Typography
-                          sx={{
-                            py: "5px",
-                            borderRadius: "5px",
-                            px: "30px",
-                            "&:hover": {
-                              color: theme.palette.red,
-                              backgroundColor: theme.palette.pink,
-                            },
-                          }}
-                          key={val}
-                        >
-                          {val}
-                        </Typography>
+                        <NavLink to={val.to} style={{ color: "unset" }}>
+                          <Typography
+                            sx={{
+                              py: "5px",
+                              borderRadius: "5px",
+                              px: "30px",
+                              "&:hover": {
+                                color: theme.palette.red,
+                                backgroundColor: theme.palette.pink,
+                              },
+                            }}
+                            key={val.listItem}
+                          >
+                            {val.listItem}
+                          </Typography>
+                        </NavLink>
                       ))}
                     </Box>
                   </Box>
@@ -348,7 +359,6 @@ const Header = () => {
           </Box>
         </Toolbar>
       </AppBar>
-
     </>
   );
 };

@@ -49,7 +49,7 @@ const CreativeService = () => {
   ];
   return (
     <Box sx={{ py: "120px" }}>
-      <Container>
+      <Container maxWidth="xl">
         <Grid container spacing={3}>
           {creativeServiceBox.map((item, index) => (
               <Grid item sm={6} md={4} key={index}>

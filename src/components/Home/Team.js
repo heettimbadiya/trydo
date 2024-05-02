@@ -10,10 +10,8 @@ import team6 from "../../assets/images/Home/team-12.jpg";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-
 const Team = () => {
   const theme = useTheme();
-
   const teamData = [
     { backImg: team1, name: "John Doe", field: "Sr. Web Developer" },
     { backImg: team2, name: "Fatima Asrafi", field: "Front-end Engineer" },
@@ -24,27 +22,34 @@ const Team = () => {
   ];
   return (
     <Box sx={{ backgroundColor: theme.palette.backgroundGrey }}>
-      <Container>
+      <Container maxWidth="xl">
         <Box>
           <Box>
-            <Box component={"h2"} sx={{ fontSize: "60px" }}>
+            <Box
+              sx={{
+                fontSize: { xs: "45px", sm: "60px" },
+                lineHeight: "1",
+                fontWeight: "700",
+                mb: "15px",
+              }}
+            >
               Skilled Team
             </Box>
             <Typography
               sx={{
                 color: theme.palette.cardTextGrey,
-                fontSize: "19px",
+                fontSize: { xs: "16px", sm: "19px" },
                 letterSpacing: "0.9px",
               }}
             >
               There are many variations of passages of Lorem Ipsum available,{" "}
-              <br /> but the majority have suffered alteration.
+              but the majority have suffered alteration.
             </Typography>
           </Box>
           <Box sx={{ my: "50px" }}>
             <Grid container spacing={3}>
               {teamData.map((item, ind) => (
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={6} md={4}>
                   <Box
                     className="portfolio"
                     sx={{
@@ -64,7 +69,7 @@ const Team = () => {
                       sx={{
                         backgroundImage: `url(${item.backImg})`,
                         height: "520px",
-                        backgroundPosition: "center",
+                        backgroundPosition: "50% 50%",
                         backgroundSize: "cover",
                         borderRadius: "5px",
                       }}
@@ -131,5 +136,4 @@ const Team = () => {
     </Box>
   );
 };
-
 export default Team;
