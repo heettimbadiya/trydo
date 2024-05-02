@@ -15,8 +15,6 @@ const theme = createTheme({
     backgroundGray: "#272527",
     transparent: "transparent",
     backgroundGredient: "-webkit-linear-gradient(90deg, #f61b10, #ef0963)",
-    
-
-  },
+      },
 });
 export default theme;
