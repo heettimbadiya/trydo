@@ -31,17 +31,16 @@ img {
 }
 
 .button {
-  margin-left: 20px !important;
   padding: 8px 25px !important;
   font-weight: 500;
   transition: 0.3s !important;
-  color: #888888 !important;
-  border: 3px solid #888888 !important;
+  color: #C6C9D8 !important;
+  border: 2px solid #C6C9D8 !important;
 }
 
 .button:hover {
   background-color: #f9004d !important;
-  border: 3px solid #f9004d !important;
+  border: 2px solid #f9004d !important;
   color: #ffffff !important;
   transform: translateY(-5px);
   font-weight: 500;

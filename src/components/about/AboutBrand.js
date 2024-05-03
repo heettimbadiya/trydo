@@ -37,7 +37,7 @@ function AboutBrand() {
   return (
     <>
       <Box
-        sx={{ padding: { lg: "120px 0px 120px 0px", xs: "40px 0px 40px 0px" } }}
+        sx={{ padding: { lg: "60px 0px 120px 0px", xs: "40px 0px 40px 0px" } }}
       >
         <Box>
           <Container maxWidth="xl">

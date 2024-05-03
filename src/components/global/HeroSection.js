@@ -11,6 +11,9 @@ const HeroSection = ({ Titale, url }) => {
       <Box
         sx={{
           height: { sm: "540px", xs: "260px" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           background: `linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(${url})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",

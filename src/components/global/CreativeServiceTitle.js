@@ -7,16 +7,16 @@ const CreativeServiceTitle = ({title}) => {
   return (
     <>
       <Container maxWidth="xl">
-        <Box sx={{ textAlign: "center", pt: "60px" }}>
-          <Typography variant="h3" sx={{ fontWeight: "700" }}>
+        <Box sx={{ display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column", pt: "60px" }}>
+          <Typography sx={{ fontWeight: "700" ,textAlign:"center",fontSize:{sm:"54px",xs:"35px"}}}>
             {title}
           </Typography>
           <Typography
             color={theme.palette.darkGray}
-            sx={{ mt: "15px", fontSize: "18px" }}
+            sx={{ mt: "15px", fontSize: "18px",width:{sm:"50%"},textAlign:"center" }}
           >
             There are many variations of passages of Lorem Ipsum available, but
-            the majority <br /> have suffered alteration.
+            the majority have suffered alteration.
           </Typography>
         </Box>
       </Container>

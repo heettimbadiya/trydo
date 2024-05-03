@@ -10,6 +10,7 @@ import team6 from "../../assets/images/Home/team-12.jpg";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import Heading from "../global/Heading";
 const Team = () => {
   const theme = useTheme();
   const teamData = [
@@ -24,28 +25,11 @@ const Team = () => {
     <Box sx={{ backgroundColor: theme.palette.backgroundGrey }}>
       <Container maxWidth="xl">
         <Box>
-          <Box>
-            <Box
-              sx={{
-                fontSize: { xs: "45px", sm: "60px" },
-                lineHeight: "1",
-                fontWeight: "700",
-                mb: "15px",
-              }}
-            >
-              Skilled Team
-            </Box>
-            <Typography
-              sx={{
-                color: theme.palette.cardTextGrey,
-                fontSize: { xs: "16px", sm: "19px" },
-                letterSpacing: "0.9px",
-              }}
-            >
-              There are many variations of passages of Lorem Ipsum available,{" "}
-              but the majority have suffered alteration.
-            </Typography>
-          </Box>
+          <Heading
+            heading={"Skilled Team"}
+            description={`There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration.`}
+          />
           <Box sx={{ my: "50px" }}>
             <Grid container spacing={3}>
               {teamData.map((item, ind) => (

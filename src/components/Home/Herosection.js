@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, useTheme } from "@mui/material";
+import { Box, Button, Container, useTheme } from "@mui/material";
 import backImg from "../../assets/images/Home/back.jpg";
 
 const Herosection = () => {
@@ -9,12 +9,14 @@ const Herosection = () => {
       <Box
         sx={{
           height: { sm: "100vh", xs: "75vh" },
-
           color: theme.palette.common.white,
           backgroundImage: `url(${backImg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           backgroundAttachment: "fixed",
         }}
       >
@@ -23,11 +25,19 @@ const Herosection = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height:"60%",
+            height: "60%",
           }}
         >
           <Container maxWidth="xl">
-            <Box sx={{ textAlign: "center", px: { md: "100px" } }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+                px: { md: "100px" },
+              }}
+            >
               <Box
                 className="theme-gradient"
                 sx={{
@@ -42,11 +52,26 @@ const Herosection = () => {
               <Box
                 sx={{
                   color: theme.palette.textGray,
-                  fontSize: { md: "24px", sm: "20px", xs: "17px" },
+                  fontSize: { md: "24px", sm: "20px", xs: "14px" },
+                  width: { sm: "70%" },
+                  textAlign: "center",
                 }}
               >
                 There are many variations of passages of Lorem Ipsum available
                 but the majority have suffered alteration.
+              </Box>
+              <Box sx={{ mt: "40px" }}>
+                <Button
+                  variant="outlined"
+                  className="button"
+                  sx={{
+                    fontSize: "16px",
+                    letterSpacing: "2px",
+                    padding: "15px 40px",
+                  }}
+                >
+                  CONTACT US
+                </Button>
               </Box>
             </Box>
           </Container>

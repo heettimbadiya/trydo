@@ -206,9 +206,9 @@ const Header = () => {
     <>
       <AppBar
         sx={{
-          position: "unset",
+          position: "absolute",
           boxShadow: "0 2px 48px 0 rgba(0,0,0,.08)",
-          backgroundColor: "#000",
+          backgroundColor: "transparent",
           py: { md: "50px", xs: "13px" },
         }}
       >
@@ -354,7 +354,7 @@ const Header = () => {
                     </Box>
                   </Box>
                 ))}
-                <Typography>
+                <Typography sx={{ml:"20px"}}>
                   <Button
                     variant="outlined"
                     className="button"
