@@ -3,16 +3,15 @@ import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import img from "../../assets/images/services-page(2)/page-2(1).png";
 import img1 from "../../assets/images/services-page(2)/page-2(2).png";
 import HeroSection from "../global/HeroSection";
-import background from "../../assets/images/services-page(2)/background.jpg"
-
+import background from "../../assets/images/services-page(2)/background.jpg";
 
 const ServicePage2 = () => {
   const theme = useTheme();
   return (
     <>
-      <HeroSection Titale={"WEBSITE DEVELOPMENT"} url={ background} />
+      <HeroSection Titale={"WEBSITE DEVELOPMENT"} url={background} />
       <Container maxWidth="xl">
-        <Box sx={{ pt: { xs: "100px"} }}>
+        <Box sx={{ pt: { xs: "100px" } }}>
           <Grid container sx={{ justifyContent: "center" }}>
             <Grid item md={6}>
               <Box sx={{ height: { lg: "650px" }, width: { lg: "600px" } }}>

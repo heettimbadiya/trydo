@@ -136,7 +136,9 @@ const Header = () => {
                   <NavLink to={item.to} style={{ color: "unset" }}>
                     <Box
                       onClick={
-                        item.subMenu.length === 0 ? () => setMobileMenuOpen(!mobileMenuOpen) : null
+                        item.subMenu.length === 0
+                          ? () => setMobileMenuOpen(!mobileMenuOpen)
+                          : null
                       }
                       sx={{ fontWeight: "500" }}
                     >
@@ -354,7 +356,7 @@ const Header = () => {
                     </Box>
                   </Box>
                 ))}
-                <Typography sx={{ml:"20px"}}>
+                <Typography sx={{ ml: "20px" }}>
                   <Button
                     variant="outlined"
                     className="button"

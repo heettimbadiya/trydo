@@ -20,7 +20,7 @@ const Heading = ({ heading, description }) => {
           color: theme.palette.cardTextGrey,
           fontSize: { xs: "15px", sm: "19px" },
           letterSpacing: "0.9px",
-          width: { sm: "50%"},
+          width: { sm: "50%" },
         }}
       >
         {description}
