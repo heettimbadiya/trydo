@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Container, useTheme } from "@mui/material";
-import backImg from "../../assets/images/Home/back.jpg";
+import backImg from "../../assets/images/Home/herosection/back.jpg";
 
 const Herosection = () => {
   const theme = useTheme();
@@ -10,10 +10,10 @@ const Herosection = () => {
         sx={{
           height: { sm: "100vh", xs: "75vh" },
           color: theme.palette.common.white,
-          backgroundImage: `url(${backImg})`,
+          background: `linear-gradient(rgba(0, 0, 16,0.6),rgba(0, 0, 16,0.6)), url(${backImg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "50% 50%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

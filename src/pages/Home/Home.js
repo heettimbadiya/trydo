@@ -7,6 +7,7 @@ import CreativeService from "../../components/global/CreativeService";
 import AboutFunFact from "../../components/about/AboutFunFact";
 import AboutTestimonial from "../../components/about/AboutTestimonial";
 import AboutBrand from "../../components/about/AboutBrand";
+import LatestNews from "../../components/Home/LatestNews";
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
       <AboutFunFact />
       <Team />
       <AboutTestimonial />
-      <OurPortofolio />
+      {/* <OurPortofolio /> */}
+      <LatestNews />
       <AboutBrand />
     </>
   );
