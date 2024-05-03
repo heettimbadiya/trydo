@@ -1,11 +1,11 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import img1 from "../../assets/image/about/brand/brand-01.png";
-import img2 from "../../assets/image/about/brand/brand-02.png";
-import img3 from "../../assets/image/about/brand/brand-03.png";
-import img4 from "../../assets/image/about/brand/brand-04.png";
-import img5 from "../../assets/image/about/brand/brand-05.png";
-import img6 from "../../assets/image/about/brand/brand-06.png";
+import img1 from "../../assets/images/about/brand/brand-01.png";
+import img2 from "../../assets/images/about/brand/brand-02.png";
+import img3 from "../../assets/images/about/brand/brand-03.png";
+import img4 from "../../assets/images/about/brand/brand-04.png";
+import img5 from "../../assets/images/about/brand/brand-05.png";
+import img6 from "../../assets/images/about/brand/brand-06.png";
 
 function AboutBrand() {
   const people = [
@@ -37,7 +37,7 @@ function AboutBrand() {
   return (
     <>
       <Box
-        sx={{ padding: { lg: "120px 0px 120px 0px", xs: "40px 0px 40px 0px" } }}
+        sx={{ padding: { lg: "60px 0px 120px 0px", xs: "40px 0px 40px 0px" } }}
       >
         <Box>
           <Container maxWidth="xl">

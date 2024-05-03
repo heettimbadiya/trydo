@@ -133,7 +133,16 @@ const Header = () => {
                     },
                   }}
                 >
-                  <Box sx={{ fontWeight: "500" }}>{item.label}</Box>
+                  <NavLink to={item.to} style={{ color: "unset" }}>
+                    <Box
+                      onClick={
+                        item.subMenu.length === 0 ? () => setMobileMenuOpen(!mobileMenuOpen) : null
+                      }
+                      sx={{ fontWeight: "500" }}
+                    >
+                      {item.label}
+                    </Box>
+                  </NavLink>
                   <Box>
                     {item.subMenu.length === 0 ? "" : <KeyboardArrowDownIcon />}
                   </Box>
@@ -166,6 +175,7 @@ const Header = () => {
                         {item.subMenu.map((val, subIndex) => (
                           <NavLink to={val.to} style={{ color: "unset" }}>
                             <Box
+                              onClick={handleDrawerToggle}
                               sx={{
                                 py: "4px",
                                 px: "15px !important",
@@ -196,9 +206,9 @@ const Header = () => {
     <>
       <AppBar
         sx={{
-          position: "unset",
+          position: "absolute",
           boxShadow: "0 2px 48px 0 rgba(0,0,0,.08)",
-          backgroundColor: "black",
+          backgroundColor: "transparent",
           py: { md: "50px", xs: "13px" },
         }}
       >
@@ -234,7 +244,6 @@ const Header = () => {
                   <img
                     src={logo}
                     alt="Logo"
-
                     style={{ objectFit: "contain !important" }}
                   />
                 </Box>
@@ -345,7 +354,7 @@ const Header = () => {
                     </Box>
                   </Box>
                 ))}
-                <Typography>
+                <Typography sx={{ml:"20px"}}>
                   <Button
                     variant="outlined"
                     className="button"

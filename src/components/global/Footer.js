@@ -11,12 +11,12 @@ const Footer = () => {
   const theme = useTheme();
   return (
     <>
-      <Box>
-        <Grid container>
+      <Box sx={{mt:"50px"}}>
+        <Grid container >
           <Grid item xs={12} md={6}>
             <Box
               sx={{
-                p: "20px 130px",
+                p: "40px 130px",
                 background: `linear-gradient(90deg, #F61B10aa, #EF0963aa) , url(${img1})center/cover`,
                 height: { md: "540px", sm: "327px" },
                 display: "flex",

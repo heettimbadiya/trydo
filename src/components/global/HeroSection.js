@@ -3,7 +3,6 @@ import { Box, useTheme } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
-import Header from "./Header";
 
 const HeroSection = ({ Titale, url }) => {
   const theme = useTheme();
@@ -11,7 +10,10 @@ const HeroSection = ({ Titale, url }) => {
     <>
       <Box
         sx={{
-          height: "504px",
+          height: { sm: "540px", xs: "260px" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           background: `linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.6)), url(${url})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -25,11 +27,14 @@ const HeroSection = ({ Titale, url }) => {
             justifyContent: "center",
           }}
         >
-          <Box sx={{pt:"80px"}}>
+          <Box sx={{ pt: "80px" }}>
             <Box>
               <Typography
                 variant="h2"
-                sx={{ fontSize: "54px", color: theme.palette.darkRed }}
+                sx={{
+                  fontSize: { sm: "54px", xs: "35px" },
+                  color: theme.palette.darkRed,
+                }}
                 textAlign="center"
                 fontWeight={800}
                 mb={2}

@@ -7,6 +7,7 @@ import portfolio1 from "../../assets/images/Home/portfolio-1.jpg";
 import portfolio2 from "../../assets/images/Home/portfolio-2.jpg";
 import portfolio3 from "../../assets/images/Home/portfolio-3.jpg";
 import portfolio4 from "../../assets/images/Home/portfolio-4.jpg";
+import Heading from "../global/Heading";
 const OurPortofolio = () => {
   const theme = useTheme();
   const styles = {
@@ -85,29 +86,12 @@ const OurPortofolio = () => {
   return (
     <Box sx={{ backgroundColor: theme.palette.backgroundGrey }}>
       <Container maxWidth="xl">
-        <Box sx={{ py: "120px" }}>
-          <Box>
-            <Box
-              sx={{
-                fontSize: { xs: "45px", sm: "60px" },
-                lineHeight: "1",
-                fontWeight: "700",
-                mb: "15px",
-              }}
-            >
-              Our Portfolio
-            </Box>
-            <Typography
-              sx={{
-                color: theme.palette.cardTextGrey,
-                fontSize: { xs: "16px", sm: "19px" },
-                letterSpacing: "0.9px",
-              }}
-            >
-              There are many variations of passages of Lorem Ipsum available,{" "}
-              <br /> but the majority have suffered alteration.
-            </Typography>
-          </Box>
+        <Box sx={{ pt: "120px" }}>
+          <Heading
+            heading={"Our Portfolio"}
+            description={`There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration.`}
+          />
           <Box sx={{ my: "50px" }}>
             <Box>
               <Swiper
