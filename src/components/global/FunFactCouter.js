@@ -3,9 +3,18 @@ import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 
-function AboutFunFact() {
+function FunFactCouter({
+  heading,
+  counterDeatils1,
+  counterDeatils2,
+  counterDeatils3,
+  counter1,
+  counter2,
+  counter3,
+}) {
   const [counterState, setCounterstate] = useState(false);
   const theme = useTheme();
+
   return (
     <>
       <Container maxWidth="xl">
@@ -17,7 +26,7 @@ function AboutFunFact() {
               <Grid item display={"flex"} justifyContent={"center"}>
                 <Box>
                   <Box textAlign={"center"}>
-                    <Typography variant="h3">Our Fun Facts</Typography>
+                    <Typography variant="h3">{heading}</Typography>
                   </Box>
                   <Grid
                     container
@@ -35,7 +44,11 @@ function AboutFunFact() {
                       >
                         <Box display={"flex"} justifyContent={"center"}>
                           {counterState && (
-                            <CountUp start={0} end={80} duration={1}></CountUp>
+                            <CountUp
+                              start={0}
+                              end={counter1}
+                              duration={1}
+                            ></CountUp>
                           )}
                           <Typography
                             sx={{
@@ -53,8 +66,7 @@ function AboutFunFact() {
                             padding: "0px 20px",
                           }}
                         >
-                          The standard chunk of Lorem Ipsum used since the 1500s
-                          is reproduced below for those.
+                          {counterDeatils1}
                         </Typography>
                       </Grid>
                     </Grid>
@@ -69,7 +81,11 @@ function AboutFunFact() {
                       >
                         <Box display={"flex"} justifyContent={"center"}>
                           {counterState && (
-                            <CountUp start={0} end={575} duration={1}></CountUp>
+                            <CountUp
+                              start={0}
+                              end={counter2}
+                              duration={1}
+                            ></CountUp>
                           )}
                           <Typography
                             sx={{
@@ -87,8 +103,7 @@ function AboutFunFact() {
                             padding: "0px 20px",
                           }}
                         >
-                          The standard chunk of Lorem Ipsum used since the 1500s
-                          is reproduced below for those.
+                          {counterDeatils2}
                         </Typography>
                       </Grid>
                     </Grid>
@@ -103,7 +118,11 @@ function AboutFunFact() {
                       >
                         <Box display={"flex"} justifyContent={"center"}>
                           {counterState && (
-                            <CountUp start={0} end={69} duration={1}></CountUp>
+                            <CountUp
+                              start={0}
+                              end={counter3}
+                              duration={1}
+                            ></CountUp>
                           )}
                           <Typography
                             sx={{
@@ -121,8 +140,7 @@ function AboutFunFact() {
                             padding: "0px 20px",
                           }}
                         >
-                          The standard chunk of Lorem Ipsum used since the 1500s
-                          is reproduced below for those.
+                          {counterDeatils3}
                         </Typography>
                       </Grid>
                     </Grid>
@@ -137,4 +155,4 @@ function AboutFunFact() {
   );
 }
 
-export default AboutFunFact;
+export default FunFactCouter;

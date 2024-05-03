@@ -11,8 +11,8 @@ const Footer = () => {
   const theme = useTheme();
   return (
     <>
-      <Box sx={{mt:"50px"}}>
-        <Grid container >
+      <Box sx={{ mt: "50px" }}>
+        <Grid container>
           <Grid item xs={12} md={6}>
             <Box
               sx={{
@@ -39,8 +39,8 @@ const Footer = () => {
                 },
               }}
             >
-              <Box sx={{zIndex:"50"}}>
-                <Typography sx={{ fontSize: "16px", letterSpacing: "4px"}}>
+              <Box sx={{ zIndex: "50" }}>
+                <Typography sx={{ fontSize: "16px", letterSpacing: "4px" }}>
                   READY TO DO THIS
                 </Typography>
                 <Typography

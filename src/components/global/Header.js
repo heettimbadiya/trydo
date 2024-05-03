@@ -120,33 +120,39 @@ const Header = () => {
           <ListItem key={index} disablePadding>
             <ListItemButton>
               <Box sx={{ width: "100%" }}>
-                <Box
-                  onClick={() => handleSubMenuToggle(index)}
-                  sx={{
-                    width: "100%",
-                    color: "black",
-                    display: "flex !important",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    "&:hover": {
-                      color: theme.palette.red,
-                    },
-                  }}
+                <NavLink
+                  to={item.to}
+                  style={{ color: "unset" }}
+                  onClick={
+                    item.subMenu.length === 0
+                      ? () => setMobileMenuOpen(!mobileMenuOpen)
+                      : null
+                  }
                 >
-                  <NavLink to={item.to} style={{ color: "unset" }}>
-                    <Box
-                      onClick={
-                        item.subMenu.length === 0 ? () => setMobileMenuOpen(!mobileMenuOpen) : null
-                      }
-                      sx={{ fontWeight: "500" }}
-                    >
-                      {item.label}
+                  <Box
+                    onClick={() => handleSubMenuToggle(index)}
+                    sx={{
+                      width: "100%",
+                      color: "black",
+                      display: "flex !important",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      "&:hover": {
+                        color: theme.palette.red,
+                      },
+                    }}
+                  >
+                    <Box sx={{ fontWeight: "500" }}>{item.label}</Box>
+                    <Box>
+                      {item.subMenu.length === 0 ? (
+                        ""
+                      ) : (
+                        <KeyboardArrowDownIcon />
+                      )}
                     </Box>
-                  </NavLink>
-                  <Box>
-                    {item.subMenu.length === 0 ? "" : <KeyboardArrowDownIcon />}
                   </Box>
-                </Box>
+                </NavLink>
+
                 <Collapse
                   in={index == mobileSubMenuOpen}
                   timeout="auto"
@@ -354,7 +360,7 @@ const Header = () => {
                     </Box>
                   </Box>
                 ))}
-                <Typography sx={{ml:"20px"}}>
+                <Typography sx={{ ml: "20px" }}>
                   <Button
                     variant="outlined"
                     className="button"

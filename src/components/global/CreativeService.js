@@ -52,14 +52,14 @@ const CreativeService = () => {
       <Container maxWidth="xl">
         <Grid container spacing={3}>
           {creativeServiceBox.map((item, index) => (
-              <Grid item sm={6} md={4} key={index}>
+            <Grid item sm={6} md={4} key={index}>
               <Box
                 height={"100%"}
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  padding: { md: "50px 35px" ,xs : "55px 40px"},
+                  padding: { md: "50px 35px", xs: "55px 40px" },
                   backgroundColor: theme.palette.cardBackground,
                   borderRadius: "10px",
                   transition: "all .3s cubic-bezier(.645,.045,.355,1)",

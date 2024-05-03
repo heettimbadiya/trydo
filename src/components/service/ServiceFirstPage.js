@@ -1,9 +1,9 @@
-import React from 'react'
-import HeroSection from '../global/HeroSection'
-import background from "../../assets/images/global/Herosection/heroImage.jpg"
-import { Box } from '@mui/material';
-import CreativeServiceTitle from '../global/CreativeServiceTitle';
-import CreativeService from '../global/CreativeService';
+import React from "react";
+import HeroSection from "../global/HeroSection";
+import background from "../../assets/images/global/Herosection/heroImage.jpg";
+import { Box } from "@mui/material";
+import CreativeServiceTitle from "../global/CreativeServiceTitle";
+import CreativeService from "../global/CreativeService";
 const ServiceFirstPage = () => {
   return (
     <>
@@ -25,6 +25,6 @@ const ServiceFirstPage = () => {
       <CreativeService />
     </>
   );
-}
+};
 
-export default ServiceFirstPage
+export default ServiceFirstPage;
