@@ -6,7 +6,8 @@ import img3 from "../../assets/images/blocks/portfolio-big-03.jpg";
 import img4 from "../../assets/images/blocks/portfolio-big-04.jpg";
 import HeroSection from "../../components/global/HeroSection";
 import background from "../../assets/images/global/Herosection/heroImage.jpg";
-import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";const VideoPopup = () => {
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+const VideoPopup = () => {
   const theme = useTheme()
   return (
     <>
@@ -46,9 +47,9 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";cons
                     },
                   }}
                 >
-                  <ArrowRightOutlinedIcon
+                  <PlayArrowIcon
                     sx={{
-                      fontSize: { sm: "70px", xs: "50px" },
+                      fontSize: { sm: "40px", xs: "30px" },
                       color: theme.palette.red,
                     }}
                   />
@@ -93,9 +94,9 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";cons
                     },
                   }}
                 >
-                  <ArrowRightOutlinedIcon
+                  <PlayArrowIcon
                     sx={{
-                      fontSize: { sm: "70px", xs: "50px" },
+                      fontSize: { sm: "40px", xs: "30px" },
                       color: "white",
                     }}
                   />
@@ -133,9 +134,9 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";cons
                     },
                   }}
                 >
-                  <ArrowRightOutlinedIcon
+                  <PlayArrowIcon
                     sx={{
-                      fontSize: { sm: "70px", xs: "50px" },
+                      fontSize: { sm: "40px", xs: "30px" },
                       color: "white",
                     }}
                   />
@@ -180,9 +181,9 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";cons
                     },
                   }}
                 >
-                  <ArrowRightOutlinedIcon
+                  <PlayArrowIcon
                     sx={{
-                      fontSize: { sm: "70px", xs: "50px" },
+                      fontSize: { sm: "40px", xs: "30px" },
                       color: "white",
                     }}
                   />
@@ -220,9 +221,9 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";cons
                     },
                   }}
                 >
-                  <ArrowRightOutlinedIcon
+                  <PlayArrowIcon
                     sx={{
-                      fontSize: { sm: "70px", xs: "50px" },
+                      fontSize: { sm: "40px", xs: "30px" },
                       color: "white",
                     }}
                   />
@@ -260,9 +261,9 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";cons
                     },
                   }}
                 >
-                  <ArrowRightOutlinedIcon
+                  <PlayArrowIcon
                     sx={{
-                      fontSize: { sm: "70px", xs: "50px" },
+                      fontSize: { sm: "40px", xs: "30px" },
                       color: "white",
                     }}
                   />

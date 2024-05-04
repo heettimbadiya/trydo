@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 
-const Heading = ({ heading, description }) => {
+const Heading = ({ heading, description ,align}) => {
   const theme = useTheme();
   return (
-    <Box>
+    <Box sx={{display: "flex",flexDirection: "column",justifyContent: "center",alignItems: align}}>
       <Box
         sx={{
           fontSize: { xs: "42px", sm: "60px" },
@@ -20,7 +20,7 @@ const Heading = ({ heading, description }) => {
           color: theme.palette.cardTextGrey,
           fontSize: { xs: "15px", sm: "19px" },
           letterSpacing: "0.9px",
-          width: { sm: "50%" },
+          width: { sm: "50%" }
         }}
       >
         {description}

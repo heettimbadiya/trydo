@@ -121,3 +121,15 @@ img {
   -webkit-background-clip: text !important;
   display: inline-block;
 }
+/* ****************block slider **************** */
+.block .swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+.block .swiper-button-next,.block .swiper-button-prev {
+  position: absolute;
+  top: 48%;
+  transition: 0.4s;
+}
+.block .swiper-button-next svg,.block .swiper-button-prev svg {
+    height: 70px;
+}

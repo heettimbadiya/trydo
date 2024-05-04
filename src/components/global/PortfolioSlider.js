@@ -3,8 +3,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../../node_modules/swiper/swiper-bundle.min.css";
 import { Pagination } from "swiper/modules";
+import portfolio1 from "../../assets/images/Home/portfolio-1.jpg";
+import portfolio2 from "../../assets/images/Home/portfolio-2.jpg";
+import portfolio3 from "../../assets/images/Home/portfolio-3.jpg";
+import portfolio4 from "../../assets/images/Home/portfolio-4.jpg";
 
-const PortfolioSlider = ({ data }) => {
+const PortfolioSlider = () => {
   const theme = useTheme();
   const styles = {
     slide: {
@@ -17,6 +21,68 @@ const PortfolioSlider = ({ data }) => {
       width: "90%",
     },
   };
+   const ourPortfolio = [
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio1,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio2,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio3,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio4,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio1,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio2,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio3,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio4,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio1,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio2,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio3,
+     },
+     {
+       title: "Development",
+       heading: "Getting tickets to a big show",
+       backImg: portfolio4,
+     },
+   ];
   return (
     <>
       <Box>
@@ -38,7 +104,7 @@ const PortfolioSlider = ({ data }) => {
             },
           }}
         >
-          {data.map((item, index) => (
+          {ourPortfolio.map((item, index) => (
             <SwiperSlide
               key={index}
               sx={{

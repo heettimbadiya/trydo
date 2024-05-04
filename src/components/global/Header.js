@@ -334,7 +334,6 @@ const Header = () => {
                         borderRadius: "8px",
                         width: "260px",
                         color: "black",
-                        p: "15px 10px",
                         visibility: "hidden",
                         opacity: "0",
                       }}
