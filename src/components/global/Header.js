@@ -330,7 +330,7 @@ const Header = () => {
                         backgroundColor: "white",
                         position: "absolute",
                         top: "50px",
-                        left: "0%",
+                        left: "-100%",
                         borderRadius: "8px",
                         width: "260px",
                         color: "black",
