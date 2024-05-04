@@ -7,6 +7,7 @@ import background from "../../assets/images/footer/footer-3.jpg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   const theme = useTheme();
   return (
@@ -53,29 +54,31 @@ const Footer = () => {
                 >
                   Let's get <Box>to work</Box>
                 </Typography>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    color: "white ",
-                    border: "2px solid white ",
-                    fontSize: "17px",
-                    letterSpacing: "2px",
-                    ml: "0 ",
-                    p: {
-                      md: "15px 40px ",
-                      sm: "10px 30px ",
-                    },
-                    mt: { md: "40px", xs: "20px" },
-                    cursor: "pointer",
-                    "&:hover": {
-                      backgroundColor: "white ",
-                      color: `${theme.palette.red} `,
+                <NavLink style={{ color: "unset" }} to={"/contact"}>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      color: "white ",
                       border: "2px solid white ",
-                    },
-                  }}
-                >
-                  CONTACT US
-                </Button>
+                      fontSize: "17px",
+                      letterSpacing: "2px",
+                      ml: "0 ",
+                      p: {
+                        md: "15px 40px ",
+                        sm: "10px 30px ",
+                      },
+                      mt: { md: "40px", xs: "20px" },
+                      cursor: "pointer",
+                      "&:hover": {
+                        backgroundColor: "white ",
+                        color: `${theme.palette.red} `,
+                        border: "2px solid white ",
+                      },
+                    }}
+                  >
+                    CONTACT US
+                  </Button>
+                </NavLink>
               </Box>
             </Box>
           </Grid>
