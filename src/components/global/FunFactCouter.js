@@ -4,13 +4,17 @@ import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 
 function FunFactCouter({
+  gap,
+  color,
   heading,
   counterDeatils1,
   counterDeatils2,
   counterDeatils3,
+  counterDeatils4,
   counter1,
   counter2,
   counter3,
+  counter4,
 }) {
   const [counterState, setCounterstate] = useState(false);
   const theme = useTheme();
@@ -19,12 +23,16 @@ function FunFactCouter({
     <>
       <Container maxWidth="xl">
         <Box
-          sx={{ padding: { lg: "0px 0px 120px 0px", xs: "0px 0px 60px 0px" } }}
+          sx={{
+            padding: gap
+              ? "0"
+              : { lg: "0px 0px 120px 0px", xs: "0px 0px 60px 0px" },
+          }}
         >
           <ScrollTrigger onEnter={() => setCounterstate(true)}>
             <Grid container display={"flex"} justifyContent={"center"}>
-              <Grid item display={"flex"} justifyContent={"center"}>
-                <Box>
+              <Grid item display={"flex"} justifyContent={"center"} xs={12}>
+                <Box width={"100%"}>
                   <Box textAlign={"center"}>
                     <Typography variant="h3">{heading}</Typography>
                   </Box>
@@ -33,12 +41,17 @@ function FunFactCouter({
                     sx={{ margin: { md: "40px 15px", sm: "0px 0px" } }}
                     display={"flex"}
                   >
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid
+                      item
+                      xs={counter4 ? 6 : 12}
+                      sm={6}
+                      md={counter4 ? 3 : 4}
+                    >
                       <Grid
                         sx={{
-                          fontSize: "72px",
+                          fontSize: counter4 ? "50px" : "72px",
                           fontWeight: "600",
-                          color: theme.palette.red,
+                          color: color ? "white" : theme.palette.red,
                         }}
                         textAlign={"center"}
                       >
@@ -50,14 +63,23 @@ function FunFactCouter({
                               duration={1}
                             ></CountUp>
                           )}
-                          <Typography
-                            sx={{
-                              fontSize: "50px",
-                              fontWeight: "500",
-                            }}
-                          >
-                            +
-                          </Typography>
+                          {counter4 ? (
+                            <Typography
+                              sx={{
+                                fontSize: "50px",
+                                fontWeight: "500",
+                              }}
+                            ></Typography>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: "50px",
+                                fontWeight: "500",
+                              }}
+                            >
+                              +
+                            </Typography>
+                          )}
                         </Box>
                         <Typography
                           sx={{
@@ -70,12 +92,17 @@ function FunFactCouter({
                         </Typography>
                       </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid
+                      item
+                      xs={counter4 ? 6 : 12}
+                      sm={6}
+                      md={counter4 ? 3 : 4}
+                    >
                       <Grid
                         sx={{
-                          fontSize: "72px",
+                          fontSize: counter4 ? "50px" : "72px",
                           fontWeight: "600",
-                          color: theme.palette.red,
+                          color: color ? "white" : theme.palette.red,
                         }}
                         textAlign={"center"}
                       >
@@ -87,14 +114,23 @@ function FunFactCouter({
                               duration={1}
                             ></CountUp>
                           )}
-                          <Typography
-                            sx={{
-                              fontSize: "50px",
-                              fontWeight: "500",
-                            }}
-                          >
-                            +
-                          </Typography>
+                          {counter4 ? (
+                            <Typography
+                              sx={{
+                                fontSize: "50px",
+                                fontWeight: "500",
+                              }}
+                            ></Typography>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: "50px",
+                                fontWeight: "500",
+                              }}
+                            >
+                              +
+                            </Typography>
+                          )}
                         </Box>
                         <Typography
                           sx={{
@@ -107,12 +143,17 @@ function FunFactCouter({
                         </Typography>
                       </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid
+                      item
+                      xs={counter4 ? 6 : 12}
+                      sm={6}
+                      md={counter4 ? 3 : 4}
+                    >
                       <Grid
                         sx={{
-                          fontSize: "72px",
+                          fontSize: counter4 ? "50px" : "72px",
                           fontWeight: "600",
-                          color: theme.palette.red,
+                          color: color ? "white" : theme.palette.red,
                         }}
                         textAlign={"center"}
                       >
@@ -124,14 +165,23 @@ function FunFactCouter({
                               duration={1}
                             ></CountUp>
                           )}
-                          <Typography
-                            sx={{
-                              fontSize: "50px",
-                              fontWeight: "500",
-                            }}
-                          >
-                            +
-                          </Typography>
+                          {counter4 ? (
+                            <Typography
+                              sx={{
+                                fontSize: "50px",
+                                fontWeight: "500",
+                              }}
+                            ></Typography>
+                          ) : (
+                            <Typography
+                              sx={{
+                                fontSize: "50px",
+                                fontWeight: "500",
+                              }}
+                            >
+                              +
+                            </Typography>
+                          )}
                         </Box>
                         <Typography
                           sx={{
@@ -144,6 +194,62 @@ function FunFactCouter({
                         </Typography>
                       </Grid>
                     </Grid>
+
+                    {counter4 && counterDeatils4 ? (
+                      <Grid
+                        item
+                        xs={counter4 ? 6 : 12}
+                        sm={6}
+                        md={counter4 ? 3 : 4}
+                      >
+                        <Grid
+                          sx={{
+                            fontSize: counter4 ? "50px" : "72px",
+                            fontWeight: "600",
+                            color: color ? "white" : theme.palette.red,
+                          }}
+                          textAlign={"center"}
+                        >
+                          <Box display={"flex"} justifyContent={"center"}>
+                            {counterState && (
+                              <CountUp
+                                start={0}
+                                end={counter4}
+                                duration={1}
+                              ></CountUp>
+                            )}
+                            {counter4 ? (
+                              <Typography
+                                sx={{
+                                  fontSize: "50px",
+                                  fontWeight: "500",
+                                }}
+                              ></Typography>
+                            ) : (
+                              <Typography
+                                sx={{
+                                  fontSize: "50px",
+                                  fontWeight: "500",
+                                }}
+                              >
+                                +
+                              </Typography>
+                            )}
+                          </Box>
+                          <Typography
+                            sx={{
+                              color: theme.palette.lightBlack,
+                              fontSize: "18px",
+                              padding: "0px 20px",
+                            }}
+                          >
+                            {counterDeatils4}
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    ) : (
+                      ""
+                    )}
                   </Grid>
                 </Box>
               </Grid>
