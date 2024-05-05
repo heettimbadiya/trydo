@@ -78,21 +78,21 @@ const Header = () => {
     },
     {
       label: "Blocks",
-      to: "/blocks",
+      to: "",
       subMenu: [
-        { listItem: "Portfolio", to: "/blocks" },
-        { listItem: "Team", to: "/blocks" },
-        { listItem: "Service", to: "/blocks" },
-        { listItem: "Video Popup", to: "/blocks" },
-        { listItem: "Progressbar", to: "/blocks" },
-        { listItem: "Gallery", to: "/blocks" },
-        { listItem: "Counters", to: "/blocks" },
-        { listItem: "Blog List", to: "/blocks" },
-        { listItem: "Clint Logo", to: "/blocks" },
-        { listItem: "Contact Form", to: "/blocks" },
-        { listItem: "Google Map", to: "/blocks" },
-        { listItem: "Columns", to: "/blocks" },
-        { listItem: "Pricing Table", to: "/blocks" },
+        { listItem: "Portfolio", to: "/blocks-portfolioblock" },
+        { listItem: "Team", to: "/blocks-teamblock" },
+        { listItem: "Service", to: "/blocks-service" },
+        { listItem: "Video Popup", to: "/blocks-videopopup" },
+        { listItem: "Progressbar", to: "/blocks-progressbar" },
+        // { listItem: "Gallery", to: "/blocks" },
+        { listItem: "Counters", to: "/blocks-counter" },
+        { listItem: "Blog List", to: "/blocks-bloglist" },
+        { listItem: "Clint Logo", to: "/blocks-clientlogo" },
+        { listItem: "Contact Form", to: "/blocks-contactform" },
+        { listItem: "Google Map", to: "/blocks-googlemap" },
+        { listItem: "Columns", to: "/blocks-columns" },
+        { listItem: "Pricing Table", to: "/blocks-pricingtable" },
       ],
     },
     { label: "Contact", to: "/contact", subMenu: [] },
@@ -254,7 +254,6 @@ const Header = () => {
                   />
                 </Box>
               </Typography>
-              {/* Mobile Menu Toggle */}
               <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
                 <IconButton
                   size="large"
@@ -265,7 +264,6 @@ const Header = () => {
                   <MenuIcon />
                 </IconButton>
               </Box>
-              {/* Mobile Menu */}
 
               <nav>
                 <Drawer
@@ -286,7 +284,6 @@ const Header = () => {
                   {drawer}
                 </Drawer>
               </nav>
-              {/* Desktop Menu */}
               <Box
                 sx={{
                   display: { xs: "none", md: "flex" },
@@ -294,7 +291,6 @@ const Header = () => {
                   alignItems: "center",
                 }}
               >
-                {/* Desktop Menu Items */}
                 {menuItems.map((item, index) => (
                   <Box
                     key={index}
@@ -334,6 +330,7 @@ const Header = () => {
                         borderRadius: "8px",
                         width: "260px",
                         color: "black",
+                        p: "15px 10px",
                         visibility: "hidden",
                         opacity: "0",
                       }}

@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "../../components/global/HeroSection";
-import "../../assets/style/About.css";
 import AboutDetails from "../../components/about/AboutDetails";
 import AboutFindWork from "../../components/about/AboutFindWork";
 import background from "../../assets/images/global/Herosection/heroImage.jpg";
