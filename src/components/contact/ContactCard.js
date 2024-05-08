@@ -32,7 +32,7 @@ const ContactCard = () => {
         <Container maxWidth="xl">
           <Grid
             container
-            sx={{ paddingY: "120px", justifyContent: "center" }}
+            sx={{ paddingY: {sm:"120px",xs:"50px"},pt:{xs:"0"}, justifyContent: "center" }}
             spacing={5}
           >
             {data.map((value, index) => (

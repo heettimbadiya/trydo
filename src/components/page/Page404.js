@@ -1,23 +1,18 @@
-import React from "react";
-import { Box, Button, Container, useTheme } from "@mui/material";
-import backImg from "../../assets/images/Home/herosection/back.jpg";
+import { Box, Button, Container, useTheme } from '@mui/material'
+import React from 'react'
 
-const Herosection = () => {
-  const theme = useTheme();
+const Page404 = () => {
+    const theme = useTheme()
   return (
     <>
       <Box
         sx={{
           height: { sm: "100vh", xs: "75vh" },
           color: theme.palette.common.white,
-          background: `linear-gradient(rgba(0, 0, 16,0.6),rgba(0, 0, 16,0.6)), url(${backImg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "50% 50%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundAttachment: "fixed",
+          backgroundColor: "#1A1B1F",
         }}
       >
         <Box
@@ -42,23 +37,24 @@ const Herosection = () => {
                 className="theme-gradient"
                 sx={{
                   background: "linear-gradient(-259deg, #f81f01, #ee076e)",
-                  fontSize: { md: "100px", sm: "80px", xs: "50px" },
-                  fontWeight: 900,
-                  mb: "10px",
+                  fontSize: { md: "170px", sm: "80px", xs: "50px" },
+                  fontWeight: 800,
+                  //   mb: "10px",
                 }}
               >
-                CREATIVE
+                404!
+              </Box>
+              <Box sx={{ fontSize: { md: "50px", sm: "30px", xs: "20px" } }}>
+                Page not found
               </Box>
               <Box
                 sx={{
                   color: theme.palette.textGray,
-                  fontSize: { md: "24px", sm: "20px", xs: "14px" },
-                  width: { sm: "70%" },
+                  fontSize: { md: "18px", sm: "16px", xs: "14px" },
                   textAlign: "center",
                 }}
               >
-                There are many variations of passages of Lorem Ipsum available
-                but the majority have suffered alteration.
+                The page you were looking for could not be found.
               </Box>
               <Box sx={{ mt: "40px" }}>
                 <Button
@@ -79,6 +75,6 @@ const Herosection = () => {
       </Box>
     </>
   );
-};
+}
 
-export default Herosection;
+export default Page404

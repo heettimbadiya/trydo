@@ -67,32 +67,32 @@ const Header = () => {
       label: "Pages",
       to: "/pages",
       subMenu: [
-        { listItem: "Blog List", to: "/pages" },
-        { listItem: "Blog Details", to: "/pages" },
-        { listItem: "Service", to: "/pages" },
-        { listItem: "Service Details", to: "/pages" },
-        { listItem: "Portfolio", to: "/pages" },
-        { listItem: "Portfolio Details", to: "/pages" },
-        { listItem: "404", to: "/pages" },
+        { listItem: "Blog List", to: "/blocks-bloglist" },
+        { listItem: "Blog Details", to: "" },
+        { listItem: "Service", to: "/blocks-service" },
+        { listItem: "Service Details", to: "/service-details" },
+        { listItem: "Portfolio", to: "/blocks-portfolioblock" },
+        { listItem: "Portfolio Details", to: "" },
+        { listItem: "404", to: "" },
       ],
     },
     {
       label: "Blocks",
-      to: "/blocks",
+      to: "",
       subMenu: [
-        { listItem: "Portfolio", to: "/blocks" },
-        { listItem: "Team", to: "/blocks" },
-        { listItem: "Service", to: "/blocks" },
-        { listItem: "Video Popup", to: "/blocks" },
-        { listItem: "Progressbar", to: "/blocks" },
-        { listItem: "Gallery", to: "/blocks" },
-        { listItem: "Counters", to: "/blocks" },
-        { listItem: "Blog List", to: "/blocks" },
-        { listItem: "Clint Logo", to: "/blocks" },
-        { listItem: "Contact Form", to: "/blocks" },
-        { listItem: "Google Map", to: "/blocks" },
-        { listItem: "Columns", to: "/blocks" },
-        { listItem: "Pricing Table", to: "/blocks" },
+        { listItem: "Portfolio", to: "/blocks-portfolioblock" },
+        { listItem: "Team", to: "/blocks-teamblock" },
+        { listItem: "Service", to: "/blocks-service" },
+        { listItem: "Video Popup", to: "/blocks-videopopup" },
+        { listItem: "Progressbar", to: "/blocks-progressbar" },
+        // { listItem: "Gallery", to: "/blocks" },
+        { listItem: "Counters", to: "/blocks-counter" },
+        { listItem: "Blog List", to: "/blocks-bloglist" },
+        { listItem: "Clint Logo", to: "/blocks-clientlogo" },
+        { listItem: "Contact Form", to: "/blocks-contactform" },
+        { listItem: "Google Map", to: "/blocks-googlemap" },
+        { listItem: "Columns", to: "/blocks-columns" },
+        { listItem: "Pricing Table", to: "/blocks-pricingtable" },
       ],
     },
     { label: "Contact", to: "/contact", subMenu: [] },
@@ -120,33 +120,39 @@ const Header = () => {
           <ListItem key={index} disablePadding>
             <ListItemButton>
               <Box sx={{ width: "100%" }}>
-                <Box
-                  onClick={() => handleSubMenuToggle(index)}
-                  sx={{
-                    width: "100%",
-                    color: "black",
-                    display: "flex !important",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    "&:hover": {
-                      color: theme.palette.red,
-                    },
-                  }}
+                <NavLink
+                  to={item.to}
+                  style={{ color: "unset" }}
+                  onClick={
+                    item.subMenu.length === 0
+                      ? () => setMobileMenuOpen(!mobileMenuOpen)
+                      : null
+                  }
                 >
-                  <NavLink to={item.to} style={{ color: "unset" }}>
-                    <Box
-                      onClick={
-                        item.subMenu.length === 0 ? () => setMobileMenuOpen(!mobileMenuOpen) : null
-                      }
-                      sx={{ fontWeight: "500" }}
-                    >
-                      {item.label}
+                  <Box
+                    onClick={() => handleSubMenuToggle(index)}
+                    sx={{
+                      width: "100%",
+                      color: "black",
+                      display: "flex !important",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      "&:hover": {
+                        color: theme.palette.red,
+                      },
+                    }}
+                  >
+                    <Box sx={{ fontWeight: "500" }}>{item.label}</Box>
+                    <Box>
+                      {item.subMenu.length === 0 ? (
+                        ""
+                      ) : (
+                        <KeyboardArrowDownIcon />
+                      )}
                     </Box>
-                  </NavLink>
-                  <Box>
-                    {item.subMenu.length === 0 ? "" : <KeyboardArrowDownIcon />}
                   </Box>
-                </Box>
+                </NavLink>
+
                 <Collapse
                   in={index == mobileSubMenuOpen}
                   timeout="auto"
@@ -248,7 +254,6 @@ const Header = () => {
                   />
                 </Box>
               </Typography>
-              {/* Mobile Menu Toggle */}
               <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
                 <IconButton
                   size="large"
@@ -259,7 +264,6 @@ const Header = () => {
                   <MenuIcon />
                 </IconButton>
               </Box>
-              {/* Mobile Menu */}
 
               <nav>
                 <Drawer
@@ -280,7 +284,6 @@ const Header = () => {
                   {drawer}
                 </Drawer>
               </nav>
-              {/* Desktop Menu */}
               <Box
                 sx={{
                   display: { xs: "none", md: "flex" },
@@ -288,7 +291,6 @@ const Header = () => {
                   alignItems: "center",
                 }}
               >
-                {/* Desktop Menu Items */}
                 {menuItems.map((item, index) => (
                   <Box
                     key={index}
@@ -324,7 +326,7 @@ const Header = () => {
                         backgroundColor: "white",
                         position: "absolute",
                         top: "50px",
-                        left: "0%",
+                        left: "-100%",
                         borderRadius: "8px",
                         width: "260px",
                         color: "black",
@@ -354,7 +356,7 @@ const Header = () => {
                     </Box>
                   </Box>
                 ))}
-                <Typography sx={{ml:"20px"}}>
+                <Typography sx={{ ml: "20px" }}>
                   <Button
                     variant="outlined"
                     className="button"

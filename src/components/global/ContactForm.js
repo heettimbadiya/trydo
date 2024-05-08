@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   Box,
   Container,
@@ -9,33 +9,33 @@ import {
   TextField,
   Button,
 } from "@mui/material";
-import form from "../../assets/images/contact/form img.jpg"
+import form from "../../assets/images/contact/form img.jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const ContactForm = () => {
-  const theme = useTheme()
-  
+  const theme = useTheme();
 
-    const validationSchema = Yup.object().shape({
-  firstName: Yup.string().required('First Name is required'),
-  email: Yup.string().email('Invalid email address').required('Email is required'),
-  contact: Yup.string().required('Phone Number is required'),
-  subject: Yup.string().required('Subject is required'),
-  message: Yup.string().required('Message is required'),
-});
-
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required("First Name is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    contact: Yup.string().required("Phone Number is required"),
+    subject: Yup.string().required("Subject is required"),
+    message: Yup.string().required("Message is required"),
+  });
 
   const formik = useFormik({
     initialValues: {
-      firstName: '',
-      email: '',
-      contact: '',
-      subject: '',
-      message: '',
+      firstName: "",
+      email: "",
+      contact: "",
+      subject: "",
+      message: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values,action) => {
+    onSubmit: (values, action) => {
       console.log(values);
       action.resetForm();
     },
@@ -247,6 +247,6 @@ const ContactForm = () => {
       </Box>
     </>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;
