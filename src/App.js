@@ -20,6 +20,7 @@ import BlocksService from "./components/blocks/BlocksService";
 import BlocksCounter from "./components/blocks/BlocksCounter";
 import BlocksClientLogo from "./components/blocks/BlocksClientLogo";
 import BlogList from "./components/blocks/BlogList";
+import Page404 from "./components/page/Page404";
 
 const App = () => {
   function ScrollToTop() {

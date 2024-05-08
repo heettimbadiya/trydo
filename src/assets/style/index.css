@@ -204,6 +204,6 @@ img {
   padding: 4px;
 }
 .swiper-pagination-bullet-active {
-  background: #fff;
+  background: #fff !important;
   outline: 2px solid #f9004d;
 }
